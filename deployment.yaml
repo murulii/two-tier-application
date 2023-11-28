@@ -1,23 +1,23 @@
-apiVersion: app:1.0-41
+apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: register-app:1.0-41
+  name: register-app-deployment
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app:1.0-41
+      app: register-app
   template:
     metadata:
       labels:
-        app:1.0-41
+        app: register-app
     spec:
       containers:
-        - name: register-app:1.0-41
-          image: murulii/app:1.0-41
+        - name: register-app
+          image: murulii/register-app-pipeline:1.0.0-9
           resources:
             limits:
               memory: "256Mi"
               cpu: "500m"
           ports:
-            - containerPort: 5000
+            - containerPort: 8080
