@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: register-app
-          image: app:1.0-30
+          image: murulii/app:1.0-31
           resources:
             limits:
               memory: "256Mi"
