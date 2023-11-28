@@ -4,7 +4,7 @@ pipeline {
     
     environment{
         
-        APP ="app"
+        APP ="register-app-pipeline"
         RELEASE = "1.0"
         
         DOCKER = "murulii"
@@ -49,15 +49,15 @@ pipeline {
         stage("Update the Deployment Tags") {
             steps {
                 sh """
-                   cat deployment.yaml 
+                   cat deployment.yaml
+                   
                    sed -i 's/${APP}.*/${APP}:${TAG}/g' deployment.yaml
-                   cat deployment.yaml        
+
+
+
+                   cat deployment.yaml
+
                 """
-              // search for app 's' substitue 
-                   //${APP}.*: This is the pattern to search for. It matches the content of the APP variable followed by any characters
-                   //${APP}:${TAG}: This is the replacement pattern. It replaces the matched pattern with the content of the APP variable, a colon (:), and the content of the TAG variable.
-                  // sed: Stream editor command.
-                  // -i: In-place editing. This option tells sed to edit the file in place, meaning it will modify the file directly rather than producing output to the console.
             }
         }
         
