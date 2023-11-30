@@ -18,7 +18,7 @@ spec:
           
           env:
             - name: MYSQL_HOST
-              value: "mysql-primary-headless"          # this is your mysql's service clusture IP, Make sure to change it with yours
+              value: "mysql-service"          # this is your mysql's service clusture IP, Make sure to change it with yours
             - name: MYSQL_PASSWORD
               value: "root"
             - name: MYSQL_USER
