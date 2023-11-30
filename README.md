@@ -1,4 +1,4 @@
-# Craete a instance for Jenkins
+# Create a instance for Jenkins
 # Installing jenkins Ubuntu
 **https://www.jenkins.io/doc/book/installing/linux/**
 
