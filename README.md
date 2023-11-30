@@ -8,7 +8,10 @@ apt update -y
 apt update install docker.io -y
 usermod -aG docker jenkins
 ````
-
+# Installing Trivy on jenkins
+`
+snap install trivy -y
+`
 # Create a K8's Cluster
 
 # Installing Argocd on k8's
