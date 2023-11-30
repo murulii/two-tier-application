@@ -17,12 +17,12 @@ spec:
         image: mysql:latest  # Use the desired MySQL image
         env:
         - name: MYSQL_ROOT_PASSWORD
-          value: your_root_password
+          value: root
         - name: MYSQL_DATABASE
-          value: your_database_name
+          value: default_db
         - name: MYSQL_USER
-          value: your_database_user
+          value: admin
         - name: MYSQL_PASSWORD
-          value: your_database_password
+          value: root
         ports:
         - containerPort: 3306
