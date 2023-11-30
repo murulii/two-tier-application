@@ -1,5 +1,9 @@
 # Create a instance for Jenkins
-# Installing jenkins Ubuntu
+
+# Install jdk-17
+
+ `apt install openjdk-17-jdk`
+# Installing jenkins in Ubuntu
 **https://www.jenkins.io/doc/book/installing/linux/**
 
 **Installing docker on jenkins**
