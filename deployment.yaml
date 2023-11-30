@@ -23,8 +23,8 @@ spec:
               value: "root"
             - name: MYSQL_USER
               value: "admin"
-            - name: MYSQL_DATABASE
-              value: "mydb"
+            - name: MYSQL_DB
+              value: "default_db"
 
           
           resources:
