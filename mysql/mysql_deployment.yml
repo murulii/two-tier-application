@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: mysql-deployment
 spec:
-  replicas: 1
+  replicas: 1  # Adjust the number of replicas as needed
   selector:
     matchLabels:
       app: mysql
@@ -13,15 +13,16 @@ spec:
         app: mysql
     spec:
       containers:
-        - name: mysql
-          image: mysql:latest          
-          env:
-            - name: MYSQL_ROOT_PASSWORD
-              value: "root"
-                
-          resources:
-            limits:
-              memory: "256Mi"
-              cpu: "500m"
-          ports:
-            - containerPort: 3306
+      - name: mysql
+        image: mysql:latest  # Use the desired MySQL image
+        env:
+        - name: MYSQL_ROOT_PASSWORD
+          value: your_root_password
+        - name: MYSQL_DATABASE
+          value: your_database_name
+        - name: MYSQL_USER
+          value: your_database_user
+        - name: MYSQL_PASSWORD
+          value: your_database_password
+        ports:
+        - containerPort: 3306
