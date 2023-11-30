@@ -19,6 +19,13 @@ spec:
         env:
         - name: MYSQL_ROOT_PASSWORD
           value: your-root-password
+        command: ["/bin/sh", "-c"]
+        args:
+        - >
+          echo 'CREATE DATABASE default_db;' &&
+          echo 'USE default_db;' &&
+          echo 'CREATE TABLE data ( id INT AUTO_INCREMENT PRIMARY KEY, name TEXT, email TEXT );' |
+          mysql -h mysql-service -u root -p$MYSQL_ROOT_PASSWORD
         ports:
         - containerPort: 3306
         volumeMounts:
