@@ -1,3 +1,4 @@
+```
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -26,3 +27,4 @@ spec:
           value: root
         ports:
         - containerPort: 3306
+```
